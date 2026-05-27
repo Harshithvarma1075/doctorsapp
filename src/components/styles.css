@@ -1,0 +1,205 @@
+nav {
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgb(234, 231, 40) 0%, rgb(217, 219, 108) 100%);
+  color: black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+Section {
+  display: flex;
+  gap: 32px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgb(217, 219, 108) 0%, rgb(234, 231, 40) 100%);
+  color: black;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+Section .content {
+  max-width: 540px;
+  flex: 1;
+}
+
+Section .content h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: black;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+Section .content p {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.6;
+}
+
+Section .image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+Section .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  Section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  Section .content {
+    max-width: none;
+  }
+
+  Section .image {
+    margin-top: 32px;
+  }
+}
+
+.doctorcard {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgb(217, 219, 108) 0%, rgba(217, 219, 108, 0.8) 100%);
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.doctorcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.doctorcard > button {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 12px;
+  margin: 10px 0;
+  color: black;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.doctorcard > button:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: black;
+}
+
+.doctorcard > h2 {
+  font-size: 24px;
+  color: black;
+  margin: 15px 0;
+  font-weight: 700;
+}
+
+.doctorcard > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px auto;
+}
+
+.doctorcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: rgba(217, 219, 108, 0.3);
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.adddoctor {
+  background: linear-gradient(135deg, rgb(217, 219, 108) 0%, rgba(217, 219, 108, 0.9) 100%);
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.adddoctorform {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  margin: 20px auto;
+  padding: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgb(217, 219, 108) 0%, rgba(217, 219, 108, 0.9) 100%);
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.adddoctorform > input {
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.adddoctorform > input:focus {
+  outline: none;
+  border-color: black;
+  background-color: white;
+}
+
+.adddoctorform > button {
+  padding: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adddoctorform > button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: black;
+  transform: translateY(-2px);
+}
+
+.adddoctorform > label {
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+}
+
+.adddoctorform > select {
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.adddoctorform > select:focus {
+  outline: none;
+  border-color: black;
+  background-color: white;
+}
