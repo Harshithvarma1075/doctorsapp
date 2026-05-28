@@ -5,6 +5,7 @@ import Doctorcard from './components/Doctorcard'
 import Adddoctor from './components/Adddoctor'
 import {useState} from 'react'
 import {useEffect} from 'react'
+import {  Route, Routes} from 'react-router-dom'
 
 function App() {
 
@@ -23,7 +24,12 @@ function App() {
     <div>
     
       <Navbar />
-      <Section />
+      <Routes>
+        <Route path='/' element={<Section />} />
+        <Route path='/adddoctor' element={<Adddoctor />} />
+
+      </Routes>
+     
       <div className='doctorcontainer'> 
 
       <Doctorcard src="https://cdn-icons-png.flaticon.com/512/9411/9411434.png" name='vasavi' specialization='psychology' gender='female'/>
@@ -33,7 +39,7 @@ function App() {
      
       
     </div>
-    <Adddoctor/>
+    
     </div>
 
     
