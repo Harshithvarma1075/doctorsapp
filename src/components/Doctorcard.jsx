@@ -1,15 +1,16 @@
-import React from 'react'
-
-function Doctorcard(props) {
-  const imageSrc = props.src || 'https://cdn-icons-png.flaticon.com/512/9411/9411434.png'
-
+import './styles.css'
+import { useNavigate } from 'react-router-dom'
+function Doctorcard({name,specialization,gender,id}) {
+  let navigate=useNavigate()
   return (
     <div className='doctorcard'>
-        <img src={imageSrc} width='100' alt={props.name || 'doctor'} />
-        <h2>{props.name}</h2>
-        <div>{props.specialization}</div>
-        <p>{props.gender}</p>
-        <button>View more</button>
+        <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/387/387561.png" width='100' height='100' alt="" />
+        </div>
+        <h1>{name}</h1>
+        <div>{specialization}</div>
+        <p>{gender}</p>
+        <button onClick={()=>navigate(`/doctor/${id}`)}>View more</button>
     </div>
   )
 }
